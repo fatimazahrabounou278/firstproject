@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>stagenow</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Stage Now</div>
+      <ul class="nav-links">
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li>
+          <a href="#services">Services</a>
+          <ul class="dropdown">
+            <li><a href="#design">Design</a></li>
+            <li><a href="#developpement">Développement</a></li>
+            <li><a href="#marketing">Marketing</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="hero-section">
+  <div class="hero-content">
+    <h1>Bienvenue sur Stage Now</h1>
+    <p>Trouvez votre stage idéal avec des milliers d'opportunités près de chez vous !</p>
+    
+    <form class="search-form">
+      <div class="form-group">
+        <label for="stage-type">Type de Stage</label>
+        <select id="stage-type">
+          <option value="full-time">Stage à temps plein</option>
+          <option value="part-time">Stage à temps partiel</option>
+          <option value="internship">Stage d'été</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="duration">Durée</label>
+        <select id="duration">
+          <option value="1-month">1 mois</option>
+          <option value="3-months">3 mois</option>
+          <option value="6-months">6 mois</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="location">Localisation</label>
+        <select id="location">
+          <option value="casablanca">Casablanca</option>
+          <option value="marrakech">Marrakech</option>
+          <option value="rabat">Rabat</option>
+          <option value="tanger">Tanger</option>
+          <option value="morocco">Maroc entier</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="sector">Secteur</label>
+        <select id="sector">
+          <option value="design">Design</option>
+          <option value="development">Développement</option>
+          <option value="marketing">Marketing</option>
+          <option value="sales">Ventes</option>
+          <option value="finance">Finance</option>
+        </select>
+      </div>
+
+      <button type="submit" class="cta-button">Rechercher</button>
+    </form>
+  </div>
+
+
+</div>
+</div>
+<div class="top-internships">
+  <h2>Nos Meilleurs Stages</h2>
+  <div class="cards-container">
+    <!-- Carte 1 -->
+    <div class="internship-card">
+      <img src="image1.jpg" alt="Stage Développement Web">
+      <h3>Stage Développement Web</h3>
+      <p>Rejoignez notre équipe de développement et travaillez sur des projets innovants tout en acquérant une expérience précieuse.</p>
+      <a href="#all-offers" class="cta-button">Voir plus</a>
+    </div>
+
+    <!-- Carte 2 -->
+    <div class="internship-card">
+      <img src="image2.jpg" alt="Stage Marketing Digital">
+      <h3>Stage Marketing Digital</h3>
+      <p>Développez vos compétences en marketing et stratégie numérique en contribuant à des campagnes passionnantes.</p>
+      <a href="#all-offers" class="cta-button">Voir plus</a>
+    </div>
+
+    <!-- Carte 3 -->
+    <div class="internship-card">
+      <img src="image3.jpg" alt="Stage Design Graphique">
+      <h3>Stage Design Graphique</h3>
+      <p>Améliorez vos compétences en design tout en travaillant sur des projets créatifs avec une équipe de professionnels.</p>
+      <a href="#all-offers" class="cta-button">Voir plus</a>
+    </div>
+  </div>
+
+  <!-- Bouton pour afficher tous les stages -->
+  <div class="view-all-btn-container">
+    <a href="all-internships.html" class="cta-button see-all-btn">Voir tous les stages</a>
+  </div>
+</div>
+<div class="section-divider"></div>
+<div class="top-profiles">
+  <h2>Nos Meilleurs Profils</h2>
+  <div class="cards-container">
+    <!-- Carte Profil 1 -->
+    <div class="profile-card">
+      <img src="image1.jpg" alt="Profil 1">
+      <h3>Profil: Alice Dupont</h3>
+      <p>Jeune diplômée en marketing digital, prête à rejoindre une équipe dynamique et à contribuer à des stratégies innovantes.</p>
+      <a href="#all-profiles" class="cta-button">Voir plus</a>
+    </div>
+
+    <!-- Carte Profil 2 -->
+    <div class="profile-card">
+      <img src="image1.jpg" alt="Profil 2">
+      <h3>Profil: Mohamed El Mansouri</h3>
+      <p>Développeur web passionné avec une expertise en JavaScript et React. À la recherche de nouveaux défis.</p>
+      <a href="#all-profiles" class="cta-button">Voir plus</a>
+    </div>
+
+    <!-- Carte Profil 3 -->
+    <div class="profile-card">
+      <img src="image1.jpg" alt="Profil 3">
+      <h3>Profil: Sara Kabbaj</h3>
+      <p>Designer graphique avec un sens aigu de la créativité. Recherche des projets visuels stimulants pour améliorer son portfolio.</p>
+      <a href="#all-profiles" class="cta-button">Voir plus</a>
+    </div>
+  </div>
+
+  <!-- Bouton pour afficher tous les profils -->
+  <div class="view-all-btn-container">
+    <a href="all-profiles.html" class="cta-button see-all-btn">Voir tous les profils</a>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2024 Stage Now. Tous droits réservés.</p>
+  </div>
+  <div class="footer-social">
+    <a href="#" class="social-icon"><i><img src="facebook.png"  width="30"></i></a>
+    <a href="#" class="social-icon"><i><img src="facebook.png"  width="30" alt=""></i></a>
+    <a href="#" class="social-icon"><i ><img src="facebook.png"width="30" alt=""></i></a>
+    <a href="#" class="social-icon"><i><img src="facebook.png"  width="30" alt=""></i></a>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

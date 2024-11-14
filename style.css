@@ -1,0 +1,474 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f3f4f6;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffb703;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  display: none;
+  list-style: none;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown li a {
+  padding: 10px 20px;
+}
+
+.dropdown li a:hover {
+  background-color: #555;
+  color: #ffb703;
+}
+
+.nav-links li:hover .dropdown {
+  display: block;
+}
+/* Section Hero */
+.hero-section {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  animation: slide 4s infinite;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color:#ffb703;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: #fff;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+select {
+  padding: 15px;
+  font-size: 1em;
+  border: 2px solid #ffb703;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  appearance: none; /* Supprime les styles par défaut du select */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: border 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+select:focus {
+  border-color: #ff9f1c;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 159, 28, 0.6);
+  transform: scale(1.05); /* Légère animation de zoom */
+}
+
+select:hover {
+  border-color: #ff9f1c;
+  box-shadow: 0 2px 8px rgba(255, 159, 28, 0.4);
+}
+
+.cta-button {
+  grid-column: span 2;
+  background-color: #ffb703;
+  color: #333;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 600;
+}
+
+.cta-button:hover {
+  background-color: #ff9f1c;
+  transform: translateY(-3px); /* Effet de levée du bouton */
+}
+
+.cta-button:active {
+  transform: translateY(1px); /* Effet de "pression" du bouton */
+}
+
+/* Animation de changement d'image */
+@keyframes slide {
+  0% {
+    background-image: url('image1.jpg');
+  }
+ 
+  
+  50% {
+    background-image: url('image3.jpg');
+  }
+ 
+  
+  100% {
+    background-image: url('image1.jpg'); /* Retourne à la première image */
+  }
+}
+/* Section des meilleurs stages */
+.top-internships {
+  text-align: center;
+  margin: 50px auto;
+  padding: 40px;
+  max-width: 1200px;
+}
+
+.top-internships h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #ffb703;
+  font-weight: bold;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.internship-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  position: relative;
+  padding: 20px;
+}
+
+.internship-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.internship-card h3 {
+  font-size: 1.8em;
+  margin-top: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+.internship-card p {
+  font-size: 1em;
+  color: #666;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.internship-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.internship-card:hover img {
+  transform: scale(1.05);
+}
+
+.internship-card .cta-button {
+  background-color: #ffb703;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.internship-card .cta-button:hover {
+  background-color: #ff9f1c;
+  transform: translateY(-3px);
+}
+
+.internship-card .cta-button:active {
+  transform: translateY(1px);
+}
+
+/* Bouton Voir tous les stages */
+.view-all-btn-container {
+  margin-top: 40px;
+}
+
+.see-all-btn {
+  background-color: #ffb703;
+  color: #333;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.see-all-btn:hover {
+  background-color: #ff9f1c;
+  transform: translateY(-3px);
+}
+
+.see-all-btn:active {
+  transform: translateY(1px);
+}
+/* Section des meilleurs profils */
+.top-profiles {
+  text-align: center;
+  margin: 50px auto;
+  padding: 40px;
+  max-width: 1200px;
+}
+
+.top-profiles h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #ff9f1c; /* couleur différente pour les profils */
+  font-weight: bold;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.profile-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  position: relative;
+  padding: 20px;
+}
+
+.profile-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.profile-card h3 {
+  font-size: 1.8em;
+  margin-top: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+.profile-card p {
+  font-size: 1em;
+  color: #666;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card:hover img {
+  transform: scale(1.05);
+}
+
+.profile-card .cta-button {
+  background-color: #ff9f1c; /* couleur différente pour les profils */
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-card .cta-button:hover {
+  background-color: #ffb703;
+  transform: translateY(-3px);
+}
+
+.profile-card .cta-button:active {
+  transform: translateY(1px);
+}
+
+/* Bouton Voir tous les profils */
+.view-all-btn-container {
+  margin-top: 40px;
+}
+
+.see-all-btn {
+  background-color: #ff9f1c; /* couleur différente pour les profils */
+  color: #333;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.see-all-btn:hover {
+  background-color: #ffb703;
+  transform: translateY(-3px);
+}
+
+.see-all-btn:active {
+  transform: translateY(1px);
+}
+/* Ligne de séparation */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd; /* couleur de la ligne */
+  margin: 50px 0; /* espace avant et après la ligne */
+}
+
+/* Autres styles des sections */
+.top-internships {
+  text-align: center;
+  margin: 50px auto;
+  padding: 40px;
+  max-width: 1200px;
+}
+
+.top-profiles {
+  text-align: center;
+  margin: 50px auto;
+  padding: 40px;
+  max-width: 1200px;
+}
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-content p {
+  font-size: 1em;
+  margin: 0;
+  color: #bbb;
+}
+
+.footer-social {
+  margin-top: 15px;
+}
+
+.social-icon {
+  font-size: 1.5em;
+  color: #bbb;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #2410d4; /* couleur dorée pour le hover */
+}
