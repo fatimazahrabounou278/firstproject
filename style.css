@@ -156,7 +156,7 @@ select:focus {
 
 select:hover {
   border-color: #ff9f1c;
-  box-shadow: 0 2px 8px rgba(255, 159, 28, 0.4);
+  box-shadow: 0 2px 8px rgba(107, 71, 20, 0.4);
 }
 
 .cta-button {
